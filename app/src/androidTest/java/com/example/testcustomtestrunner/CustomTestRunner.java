@@ -13,7 +13,6 @@ public class CustomTestRunner extends AndroidJUnitRunner {
                                       Context context) throws InstantiationException, IllegalAccessException, ClassNotFoundException {
 
         //I'm changing the application class only for test purposes. there I'll instantiate AppModule with RESTMock's url.
-        String testApplicationClassName = FakeText.class.getCanonicalName();
-        return super.newApplication(cl, testApplicationClassName, context);
+        return super.newApplication(cl, MockDemoApplication.class.getName(), context);
     }
 }
